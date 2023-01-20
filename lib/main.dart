@@ -53,9 +53,11 @@ class BasicsPage extends StatelessWidget {
        color: Color.fromRGBO(194, 231, 255, 1),
          child: Center(
          child: Image.asset(
-       "images/banner.webp",
+           'images/cat.png',
+           fit: BoxFit.cover,
+           height: size.height,
            width: size.width,
-       ),
+         ),
        )
      ),
    );
