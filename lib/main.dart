@@ -27,6 +27,8 @@ class BasicsPage extends StatelessWidget {
    var platform = Theme.of(context).platform;
    print("size: $size");
    print("platform: $platform");
+
+
    return Scaffold(
      appBar: AppBar(
        title: const Text('REFUGEES WELCOME !'),
@@ -44,15 +46,15 @@ class BasicsPage extends StatelessWidget {
                  const SnackBar(content: Text('LES KEUFS ARRIVENT !')));
            },
          ),
-
        ],
      ),
      body: Container(
        height: size.height,
        color: Color.fromRGBO(194, 231, 255, 1),
-       child: Center(
+         child: Center(
          child: Image.asset(
-       "images/banner.jpeg"
+       "images/banner.webp",
+           width: size.width,
        ),
        )
      ),
