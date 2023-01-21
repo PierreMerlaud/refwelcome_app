@@ -5,7 +5,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,46 +19,43 @@ class MyApp extends StatelessWidget {
 }
 
 class BasicsPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-   var size = MediaQuery.of(context).size;
-   var platform = Theme.of(context).platform;
-   print("size: $size");
-   print("platform: $platform");
+    var size = MediaQuery.of(context).size;
+    var platform = Theme.of(context).platform;
+    print("size: $size");
+    print("platform: $platform");
 
-
-   return Scaffold(
-     appBar: AppBar(
-       title: const Text('REFUGEES WELCOME !'),
-       backgroundColor: Colors.indigo,
-       leading: IconButton(
-         onPressed: () {},
-         icon: const Icon(Icons.home),
-       ),
-       actions: <Widget>[
-         IconButton(
-           icon: const Icon(Icons.menu),
-           tooltip: 'Show Snackbar',
-           onPressed: () {
-             ScaffoldMessenger.of(context).showSnackBar(
-                 const SnackBar(content: Text('LES KEUFS ARRIVENT !')));
-           },
-         ),
-       ],
-     ),
-     body: Container(
-       height: size.height,
-       color: Color.fromRGBO(194, 231, 255, 1),
-         child: Center(
-         child: Image.asset(
-           'images/cat.png',
-           fit: BoxFit.cover,
-           height: size.height,
-           width: size.width,
-         ),
-       )
-     ),
-   );
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('REFUGEES WELCOME !'),
+        backgroundColor: Colors.indigo,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.home),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.menu),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('LES KEUFS ARRIVENT !')));
+            },
+          ),
+        ],
+      ),
+      body: Container(
+          height: size.height,
+          color: Color.fromRGBO(194, 231, 255, 1),
+          child: Center(
+            child: Image.asset(
+              'images/cat.png',
+              fit: BoxFit.cover,
+              height: size.height,
+              width: size.width,
+            ),
+          )),
+    );
   }
 }
