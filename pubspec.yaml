@@ -59,7 +59,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - images/cat.png
+    - images/night_sky.jpg
 
 # To add assets to your application, add an assets section, like this:
 
