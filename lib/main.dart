@@ -21,8 +21,12 @@ class MyApp extends StatelessWidget {
 class BasicsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    var platform = Theme.of(context).platform;
+    var size = MediaQuery
+        .of(context)
+        .size;
+    var platform = Theme
+        .of(context)
+        .platform;
     print("size: $size");
     print("platform: $platform");
     return Scaffold(
@@ -44,6 +48,7 @@ class BasicsPage extends StatelessWidget {
           ),
         ],
       ),
+
       body: Center(
         child: Container(
           height: size.height,
@@ -61,18 +66,25 @@ class BasicsPage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 250),
+                        padding: EdgeInsets.only(top: 430),
                         child: CircleAvatar(
                           radius: 60,
                           backgroundColor: Colors.white,
-                          child: CircleAvatar(
-                            radius: 58,
-                            backgroundImage:
-                                AssetImage("images/nicolas_cage_crazy.webp"),
-                          ),
+                          child: myProfilPic(100),
                         ),
-                      )
+                      ),
                     ],
+                  ),
+                  Text(
+                    "Jojo Anas Pierrot",
+                    style: TextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25
+                    ),
+                  ),
+                  Text(
+                    "Le triangle des bermudes d'ADA TECH SCHOOL, ceux qui passent par là disparaissent. Issu d'un mélange Choletais, Berrichon et de la République des Maris...",
                   ),
                 ],
               ),
@@ -81,5 +93,22 @@ class BasicsPage extends StatelessWidget {
         ),
       ),
     );
-  } //End Widget
-} // End class
+  }
+
+  CircleAvatar myProfilPic(double radius) {
+    return CircleAvatar(
+      radius: radius,
+      backgroundImage: AssetImage("images/nicolas_cage_crazy.webp"),
+    );
+  }
+
+//  Container buttonContainer({IconData? icon, String? text}) {
+//    return Container(
+//      margin: EdgeInsets.only(left:10, right:10),
+//      padding: EdgeInsets.all(15),
+//      child: (icon == null) {
+//        ? Text(text ?? "", style: TextStyle(color: Colors.white),)
+//    }, // PAUSE VIDEO 87 à 7min19
+} //End Widget
+
+ // End class

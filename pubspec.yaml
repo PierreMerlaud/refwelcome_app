@@ -59,7 +59,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - images/night_sky.jpgn
+    - images/night_sky.jpg
     - images/cat.png
     - images/nicolas_cage_crazy.webp
 
