@@ -59,18 +59,13 @@ class BasicsPage extends StatelessWidget {
                       Image.asset(
                         'images/night_sky.jpg',
                         fit: BoxFit.cover,
-                        width: size.width,
                       ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(50.0),
-                        //add border radius
-                        child: Image.asset(
-                          "images/nicolas_cage_crazy.webp",
-                          height: 100.0,
-                          width: 100.0,
-                          fit: BoxFit.cover,
+                      Padding(
+                        padding: EdgeInsets.only(top: 500),
+                        child : CircleAvatar(radius: 100, backgroundColor: Colors.white,
+                          child : CircleAvatar(radius: 69, backgroundColor: Colors.blue, backgroundImage: AssetImage("images/cat.png")),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ],
