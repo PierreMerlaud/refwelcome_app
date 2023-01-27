@@ -5,7 +5,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,15 +19,10 @@ class MyApp extends StatelessWidget {
 }
 
 class BasicsPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery
-        .of(context)
-        .size;
-    var platform = Theme
-        .of(context)
-        .platform;
+    var size = MediaQuery.of(context).size;
+    var platform = Theme.of(context).platform;
     print("size: $size");
     print("platform: $platform");
     return Scaffold(
@@ -48,11 +42,9 @@ class BasicsPage extends StatelessWidget {
                   const SnackBar(content: Text('LES KEUFS ARRIVENT !')));
             },
           ),
-
         ],
       ),
       body: Center(
-
         child: Container(
           height: size.height,
           color: Color.fromRGBO(194, 231, 255, 1),
@@ -60,31 +52,33 @@ class BasicsPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
-                children: [Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/night_sky.jpg',
-                      fit: BoxFit.cover,
-                      width: size.width,
-                    ),
-
-                    Image.asset(
-                      'images/night_sky.jpg',
-                      fit: BoxFit.cover,
-                      width: 200,
-                    ),
-                  ],
-                ),
-
+                children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'images/night_sky.jpg',
+                        fit: BoxFit.cover,
+                        width: size.width,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(50.0),
+                        //add border radius
+                        child: Image.asset(
+                          "images/nicolas_cage_crazy.webp",
+                          height: 100.0,
+                          width: 100.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
-
           ),
         ),
       ),
     );
-
   }
 }
