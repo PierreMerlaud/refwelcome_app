@@ -80,5 +80,6 @@ class BasicsPage extends StatelessWidget {
         ),
       ),
     );
-  }
-}
+
+  } //End Widget
+} // End class
