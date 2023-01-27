@@ -54,16 +54,22 @@ class BasicsPage extends StatelessWidget {
               Column(
                 children: [
                   Stack(
-                    alignment: Alignment.center,
+                    alignment: Alignment.topCenter,
                     children: [
                       Image.asset(
                         'images/night_sky.jpg',
                         fit: BoxFit.cover,
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 500),
-                        child : CircleAvatar(radius: 100, backgroundColor: Colors.white,
-                          child : CircleAvatar(radius: 69, backgroundColor: Colors.blue, backgroundImage: AssetImage("images/cat.png")),
+                        padding: EdgeInsets.only(top: 250),
+                        child: CircleAvatar(
+                          radius: 60,
+                          backgroundColor: Colors.white,
+                          child: CircleAvatar(
+                            radius: 58,
+                            backgroundImage:
+                                AssetImage("images/nicolas_cage_crazy.webp"),
+                          ),
                         ),
                       )
                     ],
@@ -75,6 +81,5 @@ class BasicsPage extends StatelessWidget {
         ),
       ),
     );
-
   } //End Widget
 } // End class
