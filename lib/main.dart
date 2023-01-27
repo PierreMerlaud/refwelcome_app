@@ -84,7 +84,7 @@ class BasicsPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "Le triangle des bermudes d'ADA TECH SCHOOL, ceux qui passent par là disparaissent. Issu d'un mélange Choletais, Berrichon et de la République des Maris...",
+                    "Le triangle des cacas qui puent d'ADA TECH SCHOOL, ceux qui passent par là disparaissent. Issu d'un mélange Choletais, Berrichon et de la République des Maris...",
                   ),
                 ],
               ),
